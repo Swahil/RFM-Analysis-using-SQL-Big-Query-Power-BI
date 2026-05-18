@@ -58,6 +58,11 @@ Key Columns
 - conditional logic (CASE statements)
 - views to build an end-to-end RFM customer segmentation model.
 
+## Dashboard Preview
+
+Then add images:
+![Dashboard](dashboard/RFM_png.png)
+
 
 
 
