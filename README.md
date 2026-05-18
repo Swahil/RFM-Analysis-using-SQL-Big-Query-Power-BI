@@ -1,7 +1,7 @@
 # RFM-Analysis-using-SQL-Big-Query-Power-BI
 Performed RFM (Recency, Frequency, Monetary) analysis on customer purchasing behavior to identify customer segments, improve targeted marketing, and support customer retention decisions.
  ## Project Overview / Introduction
-	This project focuses on customer segmentation using the RFM (Recency, Frequency, Monetary) technique to support targeted marketing and customer retention strategies. Many businesses struggle to identify high-value customers, improve customer retention, and optimize marketing efforts. By analyzing customer purchasing behavior, this project helps businesses make more data-driven marketing and retention decisions.
+This project focuses on customer segmentation using the RFM (Recency, Frequency, Monetary) technique to support targeted marketing and customer retention strategies. Many businesses struggle to identify high-value customers, improve customer retention, and optimize marketing efforts. By analyzing customer purchasing behavior using RFM analysis, this project will help the business in making a more data-driven decision.
 
 ## Business Problem / Objective
 The company wants to segment their 2025 customers based on their purchase behavior & segment them into 10 segments for better granularity using the following steps;
