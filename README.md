@@ -191,7 +191,7 @@ GROUP BY rfm_score_segments;
 
 ## Dashboard Preview
 
-![Dashboard](dashboard/RFM_png.png)
+![Dashboard](Dashboard/rfm-dashboard.png)
 
 ## Key Insights
 
