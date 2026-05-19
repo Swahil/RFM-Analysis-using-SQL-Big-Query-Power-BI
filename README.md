@@ -13,13 +13,30 @@ The company wants to segment their 2025 customers based on their purchase behavi
 
 ________________________________________
 ## Dataset Overview
-The dataset contains 12 monthly CSV files of customer purchases from January to December
+The dataset contains 12 monthly CSV files of customer purchases which contains data that will enable us get how recently a customer made a purchase, how frequent they purchase & the revenue they bring into the business.
+###  Table Structure
 Key Columns
 - customer id
-- order_date (for calculating Recency)
-- order_id (for calculating Frequency)
-- order_value(for calculating monetary value)
+- order_date 
+- order_id 
+- order_value
 - product_type
+  
+  ###  Dataset Purpose
+The dataset was designed to support customer behavior analysis through the RFM framework by tracking:
+
+- How recently customers made purchases (Recency)
+- How often customers purchased (Frequency)
+- How much revenue customers brought in (Monetary)
+
+  ###  Notes
+  - The presence of customer_id allows transactions to be aggregated per customer, which is essential for customer segmentation.
+  - Since the dataset contains order_date and order_id, it can track purchasing timelines and buying behavior over time.
+  - order_value enables analysis of customer revenue contribution and identification of high-value customers.
+ 
+  **Dataset Link:**
+  [user_events](https://docs.google.com/spreadsheets/d/1qq04-TKpxHvDxcodKvjDDm2m-qgftMvjdXkBGbltURk/edit?usp=sharing)
+
 
 - ## Tools & Technologies
 
