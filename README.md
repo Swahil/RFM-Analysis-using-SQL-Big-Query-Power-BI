@@ -12,17 +12,19 @@ The dataset contains 12 monthly CSV files of customer purchases which contains d
 ###  Table Structure
 Key Columns
 - customer id
-- order_date 
-- order_id 
-- order_value
+- order_date (Recency)
+- order_id (Frequency)
+- order_value(Monetary value)
 - product_type
   
   ###  Dataset Purpose
-The dataset was designed to support customer behavior analysis through the RFM framework by tracking:
-
-- How recently customers made purchases (Recency)
-- How often customers purchased (Frequency)
-- How much revenue customers brought in (Monetary)
+The dataset was designed to help businesses 
+- Understand customer spending behavior
+- Identify loyal and high-value customers
+- Detect inactive or at-risk customers
+- Support personalized marketing campaigns
+- Improve customer retention strategies
+By examining customer transactions and spending patterns, the project aimed to segment customers into meaningful groups for targeted marketing, customer retention, and revenue optimization.
 
   ###  Notes
   - The presence of customer_id allows transactions to be aggregated per customer, which is essential for customer segmentation.
@@ -31,6 +33,26 @@ The dataset was designed to support customer behavior analysis through the RFM f
  
   **Dataset Link:**
   [data_source](/data_source)
+
+  ## Schema
+
+```sql
+	--step1.Append all monthly tables together
+  CREATE OR REPLACE TABLE `rfmanalysis1778.sales.sales_2025` AS 
+	SELECT * FROM `rfmanalysis1778.sales.sales202501`
+	UNION ALL SELECT * FROM `rfmanalysis1778.sales.sales202502`
+	UNION ALL SELECT * FROM `rfmanalysis1778.sales.sales202503`
+	UNION ALL SELECT * FROM `rfmanalysis1778.sales.sales202504`
+	UNION ALL SELECT * FROM `rfmanalysis1778.sales.sales202505`
+	UNION ALL SELECT * FROM `rfmanalysis1778.sales.sales202506`
+	UNION ALL SELECT * FROM `rfmanalysis1778.sales.sales202507`
+	UNION ALL SELECT * FROM `rfmanalysis1778.sales.sales202508`
+	UNION ALL SELECT * FROM `rfmanalysis1778.sales.sales202509`
+	UNION ALL SELECT * FROM `rfmanalysis1778.sales.sales202510`
+	UNION ALL SELECT * FROM `rfmanalysis1778.sales.sales202511`
+  UNION ALL SELECT * FROM `rfmanalysis1778.sales.sales202512`;
+```
+
 
 
 - ## Tools & Technologies
