@@ -70,7 +70,16 @@ By examining customer transactions and spending patterns, the project aimed to s
 3.	Assign decile scores
 4.	Compute Aggregate RFM scores
 5.	Define RFM segments
-6.	Build Power Bi report
+   -  0-3 **lost/inactive**
+   -  4-7 **at risk**
+   -  8-11 **requires attention**
+   -  12-15 **engaged**
+   -  16-19 **promising**
+   -  20-23 **potential_loyalists**
+   -  24-27 **loyal_vip**
+   -  28-30 **champions**
+     
+7.	Build Power Bi report
 
 ## Key Questions Answered
 
@@ -79,9 +88,6 @@ By examining customer transactions and spending patterns, the project aimed to s
 - Which customer segments generate the most revenue?
 - Which customers require re-engagement campaigns?
 - How can customer groups be segmented based on purchasing behavior?
-
-## SQL Techniques Used
-
 
 ## SQL Techniques Used
 
@@ -95,9 +101,100 @@ By examining customer transactions and spending patterns, the project aimed to s
 - conditional logic (CASE statements)
 - views to build an end-to-end RFM customer segmentation model.
 
+  ## SQL Techniques Used
+ ```sql
+CREATE VIEW rfmanalysis1778.sales.metric
+AS
+WITH
+  rfm AS (
+    SELECT
+      DATE_DIFF(CURRENT_DATE(), MAX(OrderDate), Day) AS recency,
+      COUNT(OrderID) AS frequency,
+      ROUND(SUM(OrderValue), 2) AS monetary,
+      CustomerID
+    FROM `rfmanalysis1778.sales.sales_2025`
+    GROUP BY CustomerID
+  )
+SELECT
+  rfm.*,
+  ROW_NUMBER() OVER (ORDER BY rfm.recency ASC) AS r_rnk,
+  ROW_NUMBER() OVER (ORDER BY rfm.frequency DESC) AS f_rnk,
+  ROW_NUMBER() OVER (ORDER BY rfm.monetary DESC) AS m_rnk
+FROM rfm;
+```
+**Objective;** Calculate recency.frequency & monetary metrics with ranks
+
+```sql
+CREATE VIEW rfmanalysis1778.sales.metric_score
+AS
+SELECT
+  `rfmanalysis1778.sales.metric`.*,
+  NTILE(10) OVER (ORDER BY r_rnk DESC) AS r_score,
+  NTILE(10) OVER (ORDER BY f_rnk DESC) AS f_score,
+  NTILE(10) OVER (ORDER BY m_rnk DESC) AS m_score
+FROM `rfmanalysis1778.sales.metric`;
+
+SELECT *
+FROM `rfmanalysis1778.sales.metric_score`
+ORDER BY m_rnk DESC;
+```
+**Objective;** Adding deciles so that we can generate the scores [1 LOWEST ,10 the BEST]
+
+```sql
+CREATE OR REPLACE VIEW `rfmanalysis1778.sales.total_rfm_score` AS
+SELECT 
+  CustomerID,
+  recency,
+  frequency,
+  monetary,
+  r_score,
+  f_score,
+  m_score,
+  (r_score + f_score + m_score) AS total_rfm_score
+FROM rfmanalysis1778.sales.metric_score
+ORDER BY total_rfm_score DESC ;
+```
+**Objective;** CALCULATE THE TOTAL SCORES FOR EACH CUSTOMER
+
+```sql
+CREATE TABLE IF NOT EXISTS rfmanalysis1778.sales.rfm_score_segments AS
+SELECT 
+  CustomerID,
+  recency,
+  frequency,
+  monetary,
+  r_score,
+  f_score,
+  m_score,
+  total_rfm_score,
+  CASE 
+      WHEN total_rfm_score >= 28 THEN 'champion'
+      WHEN total_rfm_score >= 24 THEN 'loyal_vip'
+      WHEN total_rfm_score >= 20 THEN 'potential_loyalists'
+      WHEN total_rfm_score >= 16 THEN 'promising'
+      WHEN total_rfm_score >= 12 THEN 'engaged '
+      WHEN total_rfm_score >= 8 THEN 'requires attention'
+      WHEN total_rfm_score >= 4 THEN 'at_risk '
+      ELSE  'lost/inactive'
+  END AS rfm_score_segments
+FROM `rfmanalysis1778.sales.total_rfm_score`
+ORDER BY total_rfm_score DESC;
+
+SELECT
+  rfm_score_segments,
+  COUNT(CustomerID)
+FROM `rfmanalysis1778.sales.rfm_score_segments`
+GROUP BY rfm_score_segments;
+```
+**Objective;** CREATE SEGMENTS TO GROUP THE CUSTOMERS WITH REFERENCE TO THEIR rfm_score 
+
+
 ## Dashboard Preview
 
 ![Dashboard](dashboard/RFM_png.png)
+
+## Key Insights
+
 
 
 
