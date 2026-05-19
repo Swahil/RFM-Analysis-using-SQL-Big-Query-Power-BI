@@ -60,7 +60,6 @@ Key Columns
 
 ## Dashboard Preview
 
-Then add images:
 ![Dashboard](dashboard/RFM_png.png)
 
 
