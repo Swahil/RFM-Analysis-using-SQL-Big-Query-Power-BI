@@ -48,6 +48,9 @@ Key Columns
 
 ## SQL Techniques Used
 
+
+## SQL Techniques Used
+
 - data consolidation using UNION ALL
 - Table Creation from Query Results (CREATE OR REPLACE TABLE)
 - Views Creation (CREATE VIEW)
