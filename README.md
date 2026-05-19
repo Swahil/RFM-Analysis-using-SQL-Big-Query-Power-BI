@@ -30,7 +30,7 @@ The dataset was designed to support customer behavior analysis through the RFM f
   - order_value enables analysis of customer revenue contribution and identification of high-value customers.
  
   **Dataset Link:**
-  [user_events](https://docs.google.com/spreadsheets/d/1qq04-TKpxHvDxcodKvjDDm2m-qgftMvjdXkBGbltURk/edit?usp=sharing)
+  [data_source](/data_source)
 
 
 - ## Tools & Technologies
