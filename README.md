@@ -194,6 +194,30 @@ GROUP BY rfm_score_segments;
 ![Dashboard](Dashboard/rfm-dashboard.png)
 
 ## Key Insights
+- Engaged customers (RFM 12–15) are the largest segment (61 customers), showing strong ongoing activity.
+- Loyal VIPs generate the highest revenue (KSh 4,070) with 41 customers, making them the most valuable group.
+- At-risk customers (RFM 4–7) include 38 customers who may churn without intervention.
+- Needs attention (RFM 8–11) includes 32 customers requiring re-engagement to prevent drop-off.
+
+  ## Recommendations
+  The RFM analysis highlights clear ways to improve customer value and retention by focusing on marketing, sales, and customer relationship management.
+**Marketing**
+Marketing should use targeted campaigns to retain Loyal VIP customers (41), move Promising (45) and Potential Loyalists (41) into higher-value segments, and re-engage customers who are at risk (38), need attention (32), or have gone inactive (7).
+
+**Sales**
+Sales can boost revenue by upselling and cross-selling to Engaged customers (61) and Potential Loyalists, while using bundles and timely offers to increase spending and recover customers who may be slipping away. On the strategy side, a strong CRM system is key to guiding customers through their journey from Promising to Loyal VIP, while also tracking churn risk and segment movement. Overall, growth depends on nurturing mid-tier customers, retaining high-value ones, and reducing churn in declining segments.
+
+**Management / Strategy**
+Management should focus on a retention-first approach that puts more emphasis on growing customer lifetime value rather than constantly acquiring new customers. The main priorities are expanding the Loyal VIP segment beyond 41 customers, reducing churn in the At Risk and Requires Attention groups, and upgrading Engaged customers (61) into higher-value segments. RFM segmentation should be treated as an ongoing tool for guiding business decisions rather than a one-off analysis. Overall, long-term growth will come from strengthening the Engaged and Potential Loyalist segments (102 customers combined), as they represent the strongest base for future revenue expansion.
+
+## Author
+
+Benjamin Njoroge Githua
+- GitHub - 
+- Email - benjaminnjoroge7@gmail.com
+
+
+
 
 
 
