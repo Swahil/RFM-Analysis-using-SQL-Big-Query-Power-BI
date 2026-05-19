@@ -201,19 +201,23 @@ GROUP BY rfm_score_segments;
 
   ## Recommendations
   The RFM analysis highlights clear ways to improve customer value and retention by focusing on marketing, sales, and customer relationship management.
+  
 **Marketing**
+  
 Marketing should use targeted campaigns to retain Loyal VIP customers (41), move Promising (45) and Potential Loyalists (41) into higher-value segments, and re-engage customers who are at risk (38), need attention (32), or have gone inactive (7).
 
 **Sales**
+
 Sales can boost revenue by upselling and cross-selling to Engaged customers (61) and Potential Loyalists, while using bundles and timely offers to increase spending and recover customers who may be slipping away. On the strategy side, a strong CRM system is key to guiding customers through their journey from Promising to Loyal VIP, while also tracking churn risk and segment movement. Overall, growth depends on nurturing mid-tier customers, retaining high-value ones, and reducing churn in declining segments.
 
 **Management / Strategy**
+
 Management should focus on a retention-first approach that puts more emphasis on growing customer lifetime value rather than constantly acquiring new customers. The main priorities are expanding the Loyal VIP segment beyond 41 customers, reducing churn in the At Risk and Requires Attention groups, and upgrading Engaged customers (61) into higher-value segments. RFM segmentation should be treated as an ongoing tool for guiding business decisions rather than a one-off analysis. Overall, long-term growth will come from strengthening the Engaged and Potential Loyalist segments (102 customers combined), as they represent the strongest base for future revenue expansion.
 
 ## Author
 
 Benjamin Njoroge Githua
-- GitHub - 
+- GitHub - https://github.com/Swahil
 - Email - benjaminnjoroge7@gmail.com
 
 
