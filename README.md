@@ -4,12 +4,7 @@ Performed RFM (Recency, Frequency, Monetary) analysis on customer purchasing beh
 This project focuses on customer segmentation using the RFM (Recency, Frequency, Monetary) technique to support targeted marketing and customer retention strategies. Many businesses struggle to identify high-value customers, improve customer retention, and optimize marketing efforts. By analyzing customer purchasing behavior using RFM analysis, this project will help the business in making a more data-driven decision.
 
 ## Business Problem / Objective
-The company wants to segment their 2025 customers based on their purchase behavior & segment them into 10 segments for better granularity using the following steps;
-- Calculate RFM values
--	Assign decile scores
--	Compute Aggregate RFM scores
--	Define RFM segments
--	Build Power Bi report
+Many businesses struggle to understand customer purchasing behavior, identify valuable customers and retain customers effectively. Without proper customer segmentation, marketing efforts can become too broad, inaccurate and costly.This challenge is solved through various techniques with RFM analysis being one of the best solutions to segment customers according to their transactional purchase practices.
 
 ________________________________________
 ## Dataset Overview
