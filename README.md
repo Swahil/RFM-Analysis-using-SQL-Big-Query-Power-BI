@@ -214,16 +214,17 @@ Sales can boost revenue by upselling and cross-selling to Engaged customers (61)
 
 Management should focus on a retention-first approach that puts more emphasis on growing customer lifetime value rather than constantly acquiring new customers. The main priorities are expanding the Loyal VIP segment beyond 41 customers, reducing churn in the At Risk and Requires Attention groups, and upgrading Engaged customers (61) into higher-value segments. RFM segmentation should be treated as an ongoing tool for guiding business decisions rather than a one-off analysis. Overall, long-term growth will come from strengthening the Engaged and Potential Loyalist segments (102 customers combined), as they represent the strongest base for future revenue expansion.
 
+
 ## Author
 
-Benjamin Njoroge Githua
-- GitHub - https://github.com/Swahil
-- Email - benjaminnjoroge7@gmail.com
+**Benjamin Njoroge**
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/your-profile)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat&logo=github)](https://github.com/Swahil)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=flat&logo=gmail)](mailto:benjaminnjoroge7@gmail.com)
 
+---
 
+# License
 
-
-
-
-
+This project is licensed under the [MIT License](LICENSE).You are free to use, modify, and distribute this project with attribution.
